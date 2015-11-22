@@ -59,13 +59,15 @@ with the 'on' state).
 
 Our state machine for this design is as follows:
 
-![state machine](figures/state-machine.png "LED switch state machine")\
+![state machine](figures/state-machine.png "LED switch state machine")
 
 With only two states, all we need is a 1-bit wide register (for the sequential
 logic). The next-state logic (i.e. the combinatorial logic) for this design is
 simply
-$$S' = S\cdot\bar{k_1} + \bar{S}\cdot k_0 \quad ,$$
-where $S$ is the current state, $S'$ is the next state, and $k_i$ are the keys.
+
+![next state equation](figures/next-state-eqn.png)
+
+where `S` is the current state, `S'` is the next state, and `k..` are the keys.
 
 Note that the signal for the keys from the board is high (or 1) when they are
 up, and low (or 0) when they are pressed. The logic above assumes the contrary.
@@ -122,8 +124,7 @@ let () =
 Compile and run this, then save the output to a file called `leds.v`:
 
 ~~~ {.bash}
-ocamlfind ocamlc -linkpkg -thread -package hardcaml,core \
-                                    leds.ml -o leds.native
+ocamlfind ocamlc -linkpkg -thread -package hardcaml,core leds.ml -o leds.native
 ./leds.native > leds.v
 ~~~
 
@@ -188,8 +189,8 @@ By default, Quartus uses Verilog 2001. You might want to change this to
 SystemVerilog, by going to **Assignments > Settings... > Analysis & Synthesis
 Settings > Verilog HDL Input**.
 
-Save your changes by selecting **File > Save Project**. Select **Processing
-> Start Compilation** to compile the project.
+Save your changes by selecting **File > Save Project**. Select 
+**Processing > Start Compilation** to compile the project.
 
 Once the project has been compiled in this manner, subsequent compiles can be
 done using the command line. Change directory to the project working directory,
