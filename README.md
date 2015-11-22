@@ -74,7 +74,7 @@ up, and low (or 0) when they are pressed. The logic above assumes the contrary.
 Therefore, we will invert the signal from the keys in our HardCaml design. The
 circuit diagram below shows the design we wish to achieve:
 
-![Circuit diagram](figures/circuit.png "Circuit diagram")\
+![Circuit diagram](figures/circuit.png "Circuit diagram")
 
 We can now start writing up our design in HardCaml. First, the boiler-plate:
 
@@ -123,10 +123,10 @@ let () =
 
 Compile and run this, then save the output to a file called `leds.v`:
 
-~~~ {.bash}
+```bash
 ocamlfind ocamlc -linkpkg -thread -package hardcaml,core leds.ml -o leds.native
 ./leds.native > leds.v
-~~~
+```
 
 ## Compiling for the FPGA
 
@@ -158,9 +158,9 @@ module declaration, with lots of inputs and outputs defined, including `KEY`,
 `sockit`. Inside the module declaration, call our generated `leds` module, like
 so:
 
-~~~ {.verilog}
+```verilog
       leds(OSC_50_B5B, KEY[0], KEY[1], LED[0]);
-~~~
+```
 
 Install and launch the Quartus GUI.^[These instructions are based on the lab
 exercise instructions of the 2014 "ECAD and Architecture Practical Classes" at
