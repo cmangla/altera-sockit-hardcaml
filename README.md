@@ -121,7 +121,8 @@ let () =
   HardCaml.Rtl.Verilog.write (output_string stdout) circuit
 ~~~
 
-Compile and run this, then save the output to a file called `leds.v`:
+This example is included in this repository as `src/leds.ml`. Compile and run this,
+then save the output to a file called `leds.v`:
 
 ```bash
 ocamlfind ocamlc -linkpkg -thread -package hardcaml,core leds.ml -o leds.native
