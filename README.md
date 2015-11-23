@@ -130,6 +130,9 @@ ocamlfind ocamlc -linkpkg -thread -package hardcaml,core leds.ml -o leds.native
 
 The generated Verilog file will contain a module called `leds`.
 
+Andy Ray has kindly written an [extension](https://gist.github.com/andrewray/5920da9cba5cdbba49cf)
+to this example that uses some advanced features of HardCaml.
+
 ## Compiling for the FPGA
 
 Our next step is to use Altera's tool-chain to synthesise our design into
