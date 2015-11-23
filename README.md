@@ -13,7 +13,8 @@ some unique features.
 
 This guide pieces together the details required to get started
 with programming the FPGA on the SoCkit board using HardCaml. Using the included
-example, we will program the FPGA to use keys on the board as a switch for the LEDs.
+example, we will program the FPGA to use keys on the board as a switch for the LEDs,
+which is a hopefully good starting point for more comlicated tasks.
 
 ## HardCaml
 
