@@ -11,10 +11,9 @@ RTL hardware descriptions. In a sense, HardCaml serves the same purpose as VHDL
 and Verilog, but brings some of the advantages of OCaml with it, along with
 some unique features.
 
-This tutorial pieces together the details required to get started
-with programming the FPGA on this specific SoCkit board using HardCaml. By the
-end of the tutorial, we will have programmed the FPGA to use keys on the board
-as a switch for the LEDs.
+This guide pieces together the details required to get started
+with programming the FPGA on the SoCkit board using HardCaml. Using the included
+example, we will program the FPGA to use keys on the board as a switch for the LEDs.
 
 ## HardCaml
 
